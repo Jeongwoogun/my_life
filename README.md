@@ -3,7 +3,7 @@
 ---
 
 ### 정형데이터 프로젝트
-
+[ 프로젝트 1 ](https://github.com/Jeongwoogun/my_life/tree/main/energy_consumption_prediction)
 
 ---
 
