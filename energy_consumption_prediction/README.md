@@ -1,55 +1,62 @@
-# ⚡ Energy Consumption Prediction
+# 정형데이터 프로젝트
+### 기후데이터를 이용한 전력량 예측 모델 
 
-A machine learning pipeline to predict energy consumption using various regression models, stacked ensembles, and feature importance analysis. The pipeline includes extensive preprocessing, hyperparameter tuning, model evaluation, and interpretability.
 
----
+## ⚡ Team Main Image 
+<img src="https://github.com/GUKHOJeong/EST_Project/blob/main/First_Project/energy_consumption_prediction/image/cat_lightning.png?raw=true" width="60%" height="40%" title="px(픽셀) 크기 설정" alt="cat_lightning"></img>
 
-## 🔍 Overview
 
-This project builds and evaluates a set of regression models to forecast energy usage, leveraging different sets of features. It also applies stacking techniques to improve predictive performance, and evaluates feature importance.
 
----
-
-## 📂 Project Structure
+## 📂 Project Structure 
 ```
-.
-├── energy_consumption_prediction.ipynb       # Main notebook
-├── data_extraction.ipynb                     # Notebook for merging datasets 
-├── data/                                     # Raw and processed datasets
-├── doc/                                      # Supporting documents and presentations
-├── test/                                     # Folder for codes under testing
-└── README.md
+├──  Data 
+    ├── Cleaned
+        ├──  preprocessed Weather
+        ├──  preprocessed electricity
+        ├──  preprocessed Gas 
+        ├──  Result Data
+    ├── Original
+        ├──  Origin Weather
+        ├──  Origin electricity
+        ├──  Origin Gas
+├──  doc : 프로젝트 기획서/ 최종 결과서 
+├──  test
+    ├── test : NN test
+    ├── Second_test : 모델링 코드/시각화 코드 test(작성자가 주로 사용)
+├── data_extraction:데이터 추출 코드
+├── energy_consumption_prediction : 메인 코드 
 ```
 
----
 
-## 🚀 Features
+## 🚀 Data 
+ Weather(기후데이터), electricity(전력데이터), Gas(가스데이터)
 
-- Preprocessing pipeline with safe pre- and post-split transformations
-- GridSearchCV-based hyperparameter tuning for multiple regressors
-- Stacking ensemble using the best-performing models
-- Performance metrics: MAE, RMSE, R², Adjusted R²
-- Feature importance analysis
 
----
 
-## 🧪 Models Used
+## 🧪Model
 
 - Linear Regression
 - ElasticNet
 - Support Vector Regression (SVR)
-- Decision Tree
-- Random Forest
-- AdaBoost
-- XGBoost
-- Stacking Regressor (custom ensemble)
-- Neural Network
+- Decision Tree Regressor
+- Random Forest Regressor
+- AdaBoost Regressor
+- XGBoost Regressor
+- Stacking Regressor (Base = High metric by combination)
+- NN
 - Time Series Analysis
 
----
 
-## 👥 Contributors
+## 🔍 Metric
 
+- MAE(Mean Abs Error)
+- RMSE(Root Mean Square Error)
+- R² 
+- Adjusted R² : why? 특성이 많아지면 R² 높아지므로 이를 방지하기위해서 사용 
+- Best Hyper Param : GridSearch를 통한 베스트 하이퍼 파라미터
+
+
+## Project Team Member 
 - [Jeong Gukho](https://github.com/GUKHOJeong/)
 - [Jeong Woogun]()
 - [Kim Hyungeun](https://github.com/hyungeunkk)
